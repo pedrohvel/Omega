@@ -1,0 +1,22 @@
+# Arquivos do ambiente virtual e dependências
+.env/
+.envrc
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos específicos do seu projeto
+/airflow.db
+
+# Logs e arquivos temporários
+/logs/
+/temp/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Outros arquivos e diretórios que você deseja ignorar
