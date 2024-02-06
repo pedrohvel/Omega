@@ -33,7 +33,7 @@ def save_to_csv(dataframe, filename):
     dataframe.to_csv(filename, index=False)
     print(f'Dados salvos em {filename}')
 
-def create_script(setor, empresas, output_folder):
+def create_script(empresas, output_folder):
     script_content = (
         "import pandas as pd\n"
         "import numpy as np\n"
@@ -70,56 +70,33 @@ def create_script(setor, empresas, output_folder):
         "    min_rows = 5000\n"
         "    max_rows = 25000\n\n"
 
-        f"    setores_empresas = {empresas}\n\n"
+        f"    empresas = {empresas}\n\n"
 
         f"    output_folder = \"{output_folder}\"\n\n"
 
-        "    for setor, empresas in setores_empresas:\n"
-        "        for empresa in empresas:\n"
-        "            num_rows = np.random.randint(min_rows, max_rows)\n"
-        "            dados = generate_fake_data(num_rows)\n"
-        "            filename = os.path.join(output_folder, f'{setor}_{empresa}_dados_desempenho_industrial.csv')\n"
-        "            save_to_csv(dados, filename)\n"
-        "            file_size_mb = os.path.getsize(filename) / (1024 * 1024)\n"
-        "            print(f'CSV para a empresa \"{empresa}\" no setor \"{setor}\" criado em: {filename}')\n"
-        "            print(f'Tamanho do arquivo: {file_size_mb:.2f} MB\\n')\n\n"
-
-        "    script_path = os.path.join(output_folder, f\"{setor}_script.py\")\n"
-        "    with open(script_path, 'w') as script_file:\n"
-        "        script_file.write(script_content)\n\n"
-
-        "    print(f'Script para o setor \"{setor}\" criado em: {script_path}')"
+        "    for empresa in empresas:\n"
+        "        num_rows = np.random.randint(min_rows, max_rows)\n"
+        "        dados = generate_fake_data(num_rows)\n"
+        "        filename = os.path.join(output_folder, f'{empresa}_dados_desempenho_industrial.csv')\n"
+        "        save_to_csv(dados, filename)\n"
+        "        file_size_mb = os.path.getsize(filename) / (1024 * 1024)\n"
+        "        print(f'CSV para a empresa \"{empresa}\" criado em: {filename}')\n"
+        "        print(f'Tamanho do arquivo: {file_size_mb:.2f} MB\\n')\n\n"
     )
 
     exec(script_content)
 
 if __name__ == "__main__":
-    setores_empresas = [
-        ("Manufatura", [
-            "InovaTech", "EcoPower", "TechGlobe", "FreshHarvest", "SwiftLogistics",
-            "MegaFabrica", "GreenMachining", "SmartAssembly", "SteelCraft", "PrecisionWorks",
-            "NanoMaterials", "AgileManufacture", "FutureFoundry", "PioneerProduction", "DynamicMachines"
-        ]),
-        ("Energia", [
-            "EcoPower", "CleanEnergyCorp", "WindInnovations", "SolarHarvest", "HydroTech",
-            "EnergyDynamics", "EcoEnergize", "RenewaGen", "SunSolutions", "WindForce",
-            "FusionEra", "SustainablePower", "QuantumEnergy", "EcoFuel", "FutureGrid"
-        ]),
-        ("Tecnologia", [
-            "TechGlobe", "InnoSoft", "DataDynamics", "CodeCrafters", "FutureTech",
-            "QuantumSolutions", "DigitalPulse", "NeuralTech", "SmartSystems", "CyberInnovate",
-            "NanoCode", "InnoHub", "InfoNex", "TechStorm", "DigitalFrontiers"
-        ]),
-        ("Alimentos", [
-            "FreshHarvest", "EcoFoods", "AgriInnovate", "NutriNectar", "GreenHarvest",
-            "OrganicFeast", "FarmFresh", "BioBites", "NatureNourish", "PureHarvest",
-            "FlavorFusion", "FarmToTable", "HealthyHarvest", "OrganicEats", "FoodRevolution"
-        ]),
-        ("Logística", [
-            "SwiftLogistics", "AgileShipping", "TechTransport", "DynamicDelivery", "ExpressCargo",
-            "SwiftFreight", "LogiConnect", "EcoHaul", "SmartShipping", "FutureLogistics",
-            "RapidTransit", "GreenCargo", "LogisticsHub", "QuickShip", "InnoMovers"
-        ])
+    empresas = [
+        "InovaTech", "EcoPower", "TechGlobe", "FreshHarvest", "SwiftLogistics",
+        "MegaFabrica", "GreenMachining", "SmartAssembly", "SteelCraft", "PrecisionWorks",
+        "NanoMaterials", "AgileManufacture", "FutureFoundry", "PioneerProduction", "DynamicMachines",
+        "TechInnovate", "EcoSolutions", "DataInsights", "GlobalManufacturing", "PrimeSystems",
+        "InfiniteInnovations", "QuantumTech", "AdvancedSolutions", "InnovateIndustries", "PrecisionTech",
+        "EcoTech", "SwiftSolutions", "FutureTech", "ProTech", "DynamicSolutions",
+        "InnovateSolutions", "TechPro", "PrecisionPro", "EcoPro", "GlobalPro",
+        "FuturePro", "SwiftPro", "QuantumPro", "DynamicPro", "InfinitePro",
+        "ProInnovate", "ProEco", "ProTech", "ProGlobal", "ProFuture"
     ]
 
-    create_script("DesempenhoIndustrial", setores_empresas, "C:/Users/Pedro/Projetos/Omega/Csvs")
+    create_script(empresas, "C:/Users/Pedro/Documents/GitHub/Omega/Csvs")
