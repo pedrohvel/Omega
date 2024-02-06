@@ -1,22 +1,24 @@
-# Arquivos do ambiente virtual e dependências
-.env/
-.envrc
-.venv/
-venv/
-__pycache__/
+# Arquivos de compilação
+*.o
+*.out
 *.pyc
-*.pyo
-*.pyd
 
-# Arquivos específicos do seu projeto
-/airflow.db
+# Arquivos específicos do projeto
+config.py
+secrets.py
 
-# Logs e arquivos temporários
-/logs/
-/temp/
+# Ignora a pasta __pycache__ criada pelo Python 3.3 e posterior
+__pycache__/
 
-# Arquivos do sistema operacional
-.DS_Store
-Thumbs.db
+# Ignora a pasta .vscode
+.vscode/
 
-# Outros arquivos e diretórios que você deseja ignorar
+# Ignora o ambiente virtual criado pelo Conda
+.conda/
+
+# Ignora logs e outros arquivos temporários do Airflow
+airflow-webserver.err
+airflow-webserver.pid
+airflow-worker.err
+airflow-worker.pid
+logs/
