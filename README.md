@@ -3,7 +3,7 @@
 # Projeto Omega 🚧
 
 ## Descrição
-O Projeto Omega é um conjunto dinâmico de scripts Python e fluxos de trabalho Pentaho, projetado para aplicar conceitos avançados de engenharia de dados na gestão de ETL/ELT. Os dados processados são estruturados para serem facilmente integrados em análises descritivas no Power BI e modelagem preditiva em Python.
+O Projeto Omega é um conjunto dinâmico de scripts Python e fluxos de trabalho Pentaho, projetado para aplicar conceitos de engenharia de dados na gestão de ETL/ELT. Os dados processados são estruturados para serem facilmente integrados em análises descritivas no Power BI e modelagem preditiva em Python.
 
 ## Estrutura do Projeto
 - **Scripts Python:** Encontrados no diretório `Scripts`, esses scripts geram dados sintéticos e preparam o terreno para a etapa de ETL/ELT.
