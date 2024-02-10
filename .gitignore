@@ -13,12 +13,12 @@ __pycache__/
 # Ignora a pasta .vscode
 .vscode/
 
-# Ignora o ambiente virtual criado pelo Conda
-.conda/
-
 # Ignora logs e outros arquivos temporários do Airflow
 airflow-webserver.err
 airflow-webserver.pid
 airflow-worker.err
 airflow-worker.pid
 logs/
+
+# Ignora a pasta Csvs
+Csvs/
