@@ -22,3 +22,6 @@ logs/
 
 # Ignora a pasta Csvs
 Csvs/
+
+# Ignorar a pasta Pentaho
+/Pentaho/
