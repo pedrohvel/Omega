@@ -48,7 +48,7 @@ if __name__ == "__main__":
     target_column = "Target"
     
     # Modelos específicos para classificação binária (adicione/remova conforme necessário)
-    specific_models = ['lr', 'dt', 'rf', 'et', 'lightgbm']
+    specific_models = ['lr', 'dt', 'rf', 'et']
     
     # Caminho para a pasta onde os modelos serão salvos
     save_models_path = "C:/Users/Pedro/Documents/GitHub/Omega/Modelos_ML"
