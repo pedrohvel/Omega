@@ -1538,3 +1538,307 @@ Alternately, you can install this by running `pip install pycaret[models]`
 2024-02-12 08:57:19,795:INFO:Logistic Regression Imported successfully
 2024-02-12 08:57:19,801:INFO:Starting cross validation
 2024-02-12 08:57:19,874:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-02-12 21:46:54,508:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-02-12 21:46:54,508:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-02-12 21:46:54,508:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-02-12 21:46:54,508:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-02-12 21:47:33,345:INFO:PyCaret ClassificationExperiment
+2024-02-12 21:47:33,357:INFO:Logging name: clf-default-name
+2024-02-12 21:47:33,360:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2024-02-12 21:47:33,360:INFO:version 3.2.0
+2024-02-12 21:47:33,360:INFO:Initializing setup()
+2024-02-12 21:47:33,360:INFO:self.USI: c980
+2024-02-12 21:47:33,364:INFO:self._variable_keys: {'idx', 'n_jobs_param', 'log_plots_param', 'X_test', 'pipeline', '_ml_usecase', 'is_multiclass', 'fold_shuffle_param', 'seed', 'fix_imbalance', 'fold_groups_param', '_available_plots', 'exp_id', 'data', 'X_train', 'y_train', 'target_param', 'memory', 'logging_param', 'fold_generator', 'gpu_n_jobs_param', 'USI', 'gpu_param', 'y_test', 'y', 'X', 'exp_name_log', 'html_param'}
+2024-02-12 21:47:33,367:INFO:Checking environment
+2024-02-12 21:47:33,372:INFO:python_version: 3.11.7
+2024-02-12 21:47:33,372:INFO:python_build: ('main', 'Dec 15 2023 18:05:47')
+2024-02-12 21:47:33,374:INFO:machine: AMD64
+2024-02-12 21:47:33,455:INFO:platform: Windows-10-10.0.19045-SP0
+2024-02-12 21:47:33,470:INFO:Memory: svmem(total=4241551360, available=440782848, percent=89.6, used=3800768512, free=440782848)
+2024-02-12 21:47:33,471:INFO:Physical Core: 1
+2024-02-12 21:47:33,471:INFO:Logical Core: 2
+2024-02-12 21:47:33,471:INFO:Checking libraries
+2024-02-12 21:47:33,474:INFO:System:
+2024-02-12 21:47:33,474:INFO:    python: 3.11.7 | packaged by Anaconda, Inc. | (main, Dec 15 2023, 18:05:47) [MSC v.1916 64 bit (AMD64)]
+2024-02-12 21:47:33,475:INFO:executable: c:\Users\Pedro\Documents\GitHub\Omega\.venv\Scripts\python.exe
+2024-02-12 21:47:33,475:INFO:   machine: Windows-10-10.0.19045-SP0
+2024-02-12 21:47:33,475:INFO:PyCaret required dependencies:
+2024-02-12 21:47:37,088:INFO:                 pip: 24.0
+2024-02-12 21:47:37,088:INFO:          setuptools: 65.5.0
+2024-02-12 21:47:37,088:INFO:             pycaret: 3.2.0
+2024-02-12 21:47:37,088:INFO:             IPython: 8.21.0
+2024-02-12 21:47:37,088:INFO:          ipywidgets: 8.1.2
+2024-02-12 21:47:37,088:INFO:                tqdm: 4.66.2
+2024-02-12 21:47:37,088:INFO:               numpy: 1.25.2
+2024-02-12 21:47:37,088:INFO:              pandas: 1.5.3
+2024-02-12 21:47:37,088:INFO:              jinja2: 3.1.3
+2024-02-12 21:47:37,088:INFO:               scipy: 1.10.1
+2024-02-12 21:47:37,089:INFO:              joblib: 1.3.2
+2024-02-12 21:47:37,089:INFO:             sklearn: 1.2.2
+2024-02-12 21:47:37,089:INFO:                pyod: 1.1.3
+2024-02-12 21:47:37,089:INFO:            imblearn: 0.12.0
+2024-02-12 21:47:37,089:INFO:   category_encoders: 2.6.3
+2024-02-12 21:47:37,089:INFO:            lightgbm: 4.3.0
+2024-02-12 21:47:37,089:INFO:               numba: 0.59.0
+2024-02-12 21:47:37,089:INFO:            requests: 2.31.0
+2024-02-12 21:47:37,089:INFO:          matplotlib: 3.6.0
+2024-02-12 21:47:37,089:INFO:          scikitplot: 0.3.7
+2024-02-12 21:47:37,089:INFO:         yellowbrick: 1.5
+2024-02-12 21:47:37,089:INFO:              plotly: 5.18.0
+2024-02-12 21:47:37,089:INFO:    plotly-resampler: Not installed
+2024-02-12 21:47:37,089:INFO:             kaleido: 0.2.1
+2024-02-12 21:47:37,090:INFO:           schemdraw: 0.15
+2024-02-12 21:47:37,090:INFO:         statsmodels: 0.14.1
+2024-02-12 21:47:37,090:INFO:              sktime: 0.21.1
+2024-02-12 21:47:37,090:INFO:               tbats: 1.1.3
+2024-02-12 21:47:37,090:INFO:            pmdarima: 2.0.4
+2024-02-12 21:47:37,090:INFO:              psutil: 5.9.8
+2024-02-12 21:47:37,091:INFO:          markupsafe: 2.1.5
+2024-02-12 21:47:37,091:INFO:             pickle5: Not installed
+2024-02-12 21:47:37,091:INFO:         cloudpickle: 3.0.0
+2024-02-12 21:47:37,091:INFO:         deprecation: 2.1.0
+2024-02-12 21:47:37,091:INFO:              xxhash: 3.4.1
+2024-02-12 21:47:37,091:INFO:           wurlitzer: Not installed
+2024-02-12 21:47:37,091:INFO:PyCaret optional dependencies:
+2024-02-12 21:47:37,120:INFO:                shap: Not installed
+2024-02-12 21:47:37,120:INFO:           interpret: Not installed
+2024-02-12 21:47:37,120:INFO:                umap: Not installed
+2024-02-12 21:47:37,121:INFO:     ydata_profiling: Not installed
+2024-02-12 21:47:37,121:INFO:  explainerdashboard: Not installed
+2024-02-12 21:47:37,121:INFO:             autoviz: Not installed
+2024-02-12 21:47:37,121:INFO:           fairlearn: Not installed
+2024-02-12 21:47:37,121:INFO:          deepchecks: Not installed
+2024-02-12 21:47:37,121:INFO:             xgboost: Not installed
+2024-02-12 21:47:37,121:INFO:            catboost: Not installed
+2024-02-12 21:47:37,121:INFO:              kmodes: Not installed
+2024-02-12 21:47:37,121:INFO:             mlxtend: Not installed
+2024-02-12 21:47:37,121:INFO:       statsforecast: Not installed
+2024-02-12 21:47:37,121:INFO:        tune_sklearn: Not installed
+2024-02-12 21:47:37,121:INFO:                 ray: Not installed
+2024-02-12 21:47:37,121:INFO:            hyperopt: Not installed
+2024-02-12 21:47:37,121:INFO:              optuna: Not installed
+2024-02-12 21:47:37,121:INFO:               skopt: Not installed
+2024-02-12 21:47:37,122:INFO:              mlflow: Not installed
+2024-02-12 21:47:37,122:INFO:              gradio: Not installed
+2024-02-12 21:47:37,122:INFO:             fastapi: Not installed
+2024-02-12 21:47:37,122:INFO:             uvicorn: Not installed
+2024-02-12 21:47:37,122:INFO:              m2cgen: Not installed
+2024-02-12 21:47:37,122:INFO:           evidently: Not installed
+2024-02-12 21:47:37,122:INFO:               fugue: Not installed
+2024-02-12 21:47:37,122:INFO:           streamlit: Not installed
+2024-02-12 21:47:37,122:INFO:             prophet: Not installed
+2024-02-12 21:47:37,122:INFO:None
+2024-02-12 21:47:37,123:INFO:Set up data.
+2024-02-12 21:48:16,040:INFO:Set up folding strategy.
+2024-02-12 21:48:16,099:INFO:Set up train/test split.
+2024-02-12 21:48:29,921:INFO:Set up index.
+2024-02-12 21:48:31,192:INFO:Assigning column types.
+2024-02-12 21:48:33,617:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2024-02-12 21:48:33,772:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2024-02-12 21:48:33,894:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2024-02-12 21:48:34,222:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 21:48:34,226:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 21:48:34,322:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2024-02-12 21:48:34,324:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2024-02-12 21:48:34,379:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 21:48:34,379:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 21:48:34,380:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2024-02-12 21:48:34,493:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2024-02-12 21:48:34,546:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 21:48:34,547:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 21:48:34,666:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2024-02-12 21:48:34,720:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 21:48:34,720:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 21:48:34,721:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2024-02-12 21:48:34,862:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 21:48:34,862:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 21:48:35,007:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 21:48:35,008:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 21:48:35,097:INFO:Preparing preprocessing pipeline...
+2024-02-12 21:48:35,536:INFO:Set up simple imputation.
+2024-02-12 21:48:39,028:INFO:Set up encoding of categorical features.
+2024-02-12 21:49:19,928:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:246: UserWarning: Persisting input arguments took 20.36s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  fitted_transformer = self._memory_fit(
+
+2024-02-12 21:50:07,604:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:253: UserWarning: Persisting input arguments took 21.46s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = self._memory_transform(
+
+2024-02-12 21:50:50,023:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:246: UserWarning: Persisting input arguments took 16.71s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  fitted_transformer = self._memory_fit(
+
+2024-02-12 21:51:40,041:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:253: UserWarning: Persisting input arguments took 17.70s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = self._memory_transform(
+
+2024-02-12 21:52:16,000:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:246: UserWarning: Persisting input arguments took 15.94s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  fitted_transformer = self._memory_fit(
+
+2024-02-12 21:53:12,836:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:253: UserWarning: Persisting input arguments took 20.16s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = self._memory_transform(
+
+2024-02-12 21:55:16,449:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:275: UserWarning: Persisting input arguments took 42.02s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  fitted_estimator = self._memory_fit(
+
+2024-02-12 21:55:16,835:INFO:Finished creating preprocessing pipeline.
+2024-02-12 21:55:16,910:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\Pedro\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Revenue', 'Expenses', 'Profit',
+                                             'Efficiency', 'Quality',
+                                             'Innovation', 'Satisfaction',
+                                             'Market_Share', 'Mean_Value',
+                                             'Max_Value', 'Min_Value',
+                                             'Total_Production'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy...
+                ('rest_encoding',
+                 TransformerWrapper(exclude=None,
+                                    include=['Timestamp', 'Company_Name',
+                                             'Key_Column', 'Company_ID'],
+                                    transformer=TargetEncoder(cols=['Timestamp',
+                                                                    'Company_Name',
+                                                                    'Key_Column',
+                                                                    'Company_ID'],
+                                                              drop_invariant=False,
+                                                              handle_missing='return_nan',
+                                                              handle_unknown='value',
+                                                              hierarchy=None,
+                                                              min_samples_leaf=20,
+                                                              return_df=True,
+                                                              smoothing=10,
+                                                              verbose=0)))],
+         verbose=False)
+2024-02-12 21:55:16,911:INFO:Creating final display dataframe.
+2024-02-12 21:57:27,506:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:110: UserWarning: Persisting input arguments took 14.76s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2024-02-12 21:59:31,303:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:110: UserWarning: Persisting input arguments took 46.14s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2024-02-12 22:00:20,625:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:286: UserWarning: Persisting input arguments took 46.41s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = self._memory_full_transform(
+
+2024-02-12 22:01:43,220:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:110: UserWarning: Persisting input arguments took 16.75s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2024-02-12 22:02:21,302:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:110: UserWarning: Persisting input arguments took 17.28s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2024-02-12 22:02:40,741:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:110: UserWarning: Persisting input arguments took 5.76s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2024-02-12 22:03:56,603:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:110: UserWarning: Persisting input arguments took 31.96s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2024-02-12 22:04:40,817:WARNING:c:\Users\Pedro\Documents\GitHub\Omega\.venv\Lib\site-packages\pycaret\internal\pipeline.py:286: UserWarning: Persisting input arguments took 43.05s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = self._memory_full_transform(
+
+2024-02-12 22:06:16,158:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target            Target
+2                   Target type            Binary
+3           Original data shape     (5706247, 18)
+4        Transformed data shape     (5706247, 22)
+5   Transformed train set shape     (3994372, 22)
+6    Transformed test set shape     (1711875, 22)
+7              Numeric features                12
+8          Categorical features                 5
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation              mean
+12       Categorical imputation              mode
+13     Maximum one-hot encoding                25
+14              Encoding method              None
+15               Fold Generator   StratifiedKFold
+16                  Fold Number                10
+17                     CPU Jobs                -1
+18                      Use GPU             False
+19               Log Experiment             False
+20              Experiment Name  clf-default-name
+21                          USI              c980
+2024-02-12 22:06:16,583:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 22:06:16,592:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 22:06:16,768:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 22:06:16,769:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2024-02-12 22:06:16,811:INFO:setup() successfully completed in 1123.68s...............
+2024-02-12 22:06:16,835:INFO:Initializing compare_models()
+2024-02-12 22:06:16,836:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000015E4870F790>, include=None, exclude=None, fold=None, round=4, cross_validation=True, sort=AUC, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x0000015E4870F790>, 'include': None, 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'AUC', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>})
+2024-02-12 22:06:16,836:INFO:Checking exceptions
+2024-02-12 22:06:19,870:INFO:Preparing display monitor
+2024-02-12 22:06:20,443:INFO:Initializing Logistic Regression
+2024-02-12 22:06:20,443:INFO:Total runtime is 0.0 minutes
+2024-02-12 22:06:20,444:INFO:SubProcess create_model() called ==================================
+2024-02-12 22:06:20,456:INFO:Initializing create_model()
+2024-02-12 22:06:20,457:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000015E4870F790>, estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000015E7FBC3110>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-02-12 22:06:20,457:INFO:Checking exceptions
+2024-02-12 22:06:20,458:INFO:Importing libraries
+2024-02-12 22:06:20,458:INFO:Copying training dataset
+2024-02-12 22:06:27,398:INFO:Defining folds
+2024-02-12 22:06:27,399:INFO:Declaring metric variables
+2024-02-12 22:06:27,399:INFO:Importing untrained model
+2024-02-12 22:06:27,402:INFO:Logistic Regression Imported successfully
+2024-02-12 22:06:27,406:INFO:Starting cross validation
+2024-02-12 22:06:27,454:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-02-12 22:41:19,079:INFO:Calculating mean and std
+2024-02-12 22:41:19,293:INFO:Creating metrics dataframe
+2024-02-12 22:41:22,022:INFO:Uploading results into container
+2024-02-12 22:41:22,088:INFO:Uploading model into container now
+2024-02-12 22:41:22,161:INFO:_master_model_container: 1
+2024-02-12 22:41:22,162:INFO:_display_container: 2
+2024-02-12 22:41:22,224:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2024-02-12 22:41:22,225:INFO:create_model() successfully completed......................................
+2024-02-12 22:41:26,057:INFO:SubProcess create_model() end ==================================
+2024-02-12 22:41:26,057:INFO:Creating metrics dataframe
+2024-02-12 22:41:26,069:INFO:Initializing K Neighbors Classifier
+2024-02-12 22:41:26,070:INFO:Total runtime is 35.093774072329204 minutes
+2024-02-12 22:41:26,071:INFO:SubProcess create_model() called ==================================
+2024-02-12 22:41:26,071:INFO:Initializing create_model()
+2024-02-12 22:41:26,071:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000015E4870F790>, estimator=knn, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000015E7FBC3110>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-02-12 22:41:26,071:INFO:Checking exceptions
+2024-02-12 22:41:26,071:INFO:Importing libraries
+2024-02-12 22:41:26,074:INFO:Copying training dataset
+2024-02-12 22:41:36,879:INFO:Defining folds
+2024-02-12 22:41:36,879:INFO:Declaring metric variables
+2024-02-12 22:41:36,879:INFO:Importing untrained model
+2024-02-12 22:41:36,880:INFO:K Neighbors Classifier Imported successfully
+2024-02-12 22:41:36,880:INFO:Starting cross validation
+2024-02-12 22:41:37,265:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
