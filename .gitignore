@@ -25,3 +25,9 @@ Csvs/
 
 # Ignorar a pasta Pentaho
 /Pentaho/
+
+# Ignora a pasta Scripts
+/Scripts/
+
+# Ignora o arquivo requirements.txt
+/requirements.txt

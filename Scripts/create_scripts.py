@@ -1,66 +1,63 @@
 import os
-import pandas as pd
-import numpy as np
-from datetime import datetime, timedelta
-from faker import Faker
+import tkinter as tk
+from tkinter import filedialog
+from tkinter import ttk
 
-fake = Faker()
+def executar_bat(caminho_bat):
+    os.startfile(caminho_bat)
 
-def generate_fake_data(num_rows=100, num_columns=15, company_name=None, industry_type=None):
-    timestamps = [datetime.now() - timedelta(days=i) for i in range(num_rows)]
+def listar_bats(pasta):
+    bats = [arquivo for arquivo in os.listdir(pasta) if arquivo.endswith('.bat')]
+    return bats
+
+def obter_pasta_scripts():
+    # Obtém o diretório do script Python
+    diretorio_script = os.path.dirname(os.path.abspath(__file__))
     
-    columns_data = {
-        'Timestamp': timestamps,
-        'Company_Name': [company_name] * num_rows,
-        'Industry_Type': [industry_type] * num_rows,
-        'Revenue': np.random.randint(500000, 1000000, num_rows),
-        'Expenses': np.random.randint(300000, 700000, num_rows),
-        'Profit': np.random.randint(100000, 400000, num_rows),
-        'Efficiency': np.random.uniform(0.7, 0.95, num_rows),
-        'Quality': np.random.uniform(0.7, 0.95, num_rows),
-        'Innovation': np.random.uniform(0.7, 0.95, num_rows),
-        'Satisfaction': np.random.uniform(0.7, 0.95, num_rows),
-        'Market_Share': np.random.uniform(5, 20, num_rows),
-        'Key_Column': [f'Key_{i}' for i in range(num_rows)]
-    }
+    # Concatena "Scripts" ao diretório do script
+    pasta_scripts = os.path.join(diretorio_script, "Scripts")
 
-    df = pd.DataFrame(columns_data)
-    df['Timestamp'] = df['Timestamp'].dt.strftime('%Y-%m-%d %H:%M:%S')
+    return pasta_scripts
 
-    # Adicionando estatísticas fictícias
-    df['Mean_Value'] = df['Efficiency'] * df['Quality'] * df['Innovation']
-    df['Max_Value'] = df[['Revenue', 'Expenses', 'Profit']].max(axis=1)
-    df['Min_Value'] = df[['Revenue', 'Expenses', 'Profit']].min(axis=1)
-    df['Total_Production'] = df['Market_Share'] * 1000
+def criar_interface():
+    # Obtém a pasta Scripts automaticamente
+    pasta_scripts = obter_pasta_scripts()
 
-    return df
+    if os.path.exists(pasta_scripts):
+        bats = listar_bats(pasta_scripts)
 
-def create_csvs(output_folder, num_csvs_per_sector=10):
-    setores_empresas = [
-        ("Tecnologia", "TechGlobe"),
-        ("Saúde", "HealthCare"),
-        ("Manufatura", "ManufaturaCo"),
-        ("Energia", "EnerTech"),
-        ("Logística", "SwiftLogistics")
-        # Adicione mais setores e empresas conforme necessário
-    ]
+        if bats:
+            # Criar a janela principal
+            root = tk.Tk()
+            root.title("Executar BATs")
 
-    for setor, empresa in setores_empresas:
-        for i in range(num_csvs_per_sector):
-            num_rows = np.random.randint(10000, 50000)
-            fake_company_name = fake.company()
+            # Verificar se o tema escuro é suportado
+            if 'theme' in root.tk_get_themes():
+                root.tk_setPalette(background='#333', foreground='white')
+                style = ttk.Style()
+                style.configure('TButton', background='#444', foreground='white', padding=6, relief="flat")
+                style.configure('TLabel', background='#333', foreground='white')
 
-            dados = generate_fake_data(num_rows, company_name=fake_company_name, industry_type=setor)
+                # Adicionar um rótulo
+                label = ttk.Label(root, text="Selecione um BAT para executar:")
+                label.pack(pady=10)
 
-            csv_name = f'Dados_{setor}_{fake_company_name}_{i+1}'
+                # Criar um botão para cada BAT
+                for bat in bats:
+                    caminho_bat = os.path.join(pasta_scripts, bat)
+                    botao_bat = ttk.Button(root, text=bat, command=lambda b=caminho_bat: executar_bat(b))
+                    botao_bat.pack(pady=5)
 
-            dados['Company_ID'] = f'{setor}_{fake_company_name}'
+                # Iniciar o loop de eventos da interface gráfica
+                root.mainloop()
 
-            filename = os.path.join(output_folder, f'{csv_name}.csv')
+            else:
+                print("Tema escuro não suportado no sistema operacional.")
 
-            dados.to_csv(filename, index=False)
-            print(f'CSV para a empresa "{fake_company_name}", setor "{setor}", arquivo {i+1} criado em: {filename}')
+        else:
+            print("Nenhum arquivo BAT encontrado na pasta Scripts.")
+    else:
+        print("Pasta Scripts não encontrada.")
 
-if __name__ == "__main__":
-    output_folder = "C:/Users/Pedro/Documents/GitHub/Omega/Csvs"
-    create_csvs(output_folder)
+# Chamar a função para criar a interface
+criar_interface()
